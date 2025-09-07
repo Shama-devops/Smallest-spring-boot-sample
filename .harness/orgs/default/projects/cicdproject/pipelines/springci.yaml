@@ -50,3 +50,4 @@ pipeline:
                     tags:
                       - v1.0
                     dockerfile: Dockerfile
+                    context: SmallestSpringApp
