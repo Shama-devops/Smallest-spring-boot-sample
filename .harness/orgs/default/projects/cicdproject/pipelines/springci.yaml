@@ -40,3 +40,13 @@ pipeline:
                       cd SmallestSpringApp
                       mvn -B clean package
                       mvn -B test
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: Build And Push to Docker Registry
+                  identifier: Build_And_Push_to_Docker_Registry
+                  spec:
+                    connectorRef: DockerHubconnector
+                    repo: shamamumtaz/spring-ci
+                    tags:
+                      - v1.0
+                    dockerfile: Dockerfile
