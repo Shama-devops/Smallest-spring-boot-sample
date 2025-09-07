@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: k8s-infra
+  identifier: k8sinfra
+  orgIdentifier: default
+  projectIdentifier: cicdproject
+  environmentRef: minikubedev
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: k8sconnector
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
