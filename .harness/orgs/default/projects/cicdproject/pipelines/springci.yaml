@@ -59,12 +59,20 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: smallestspringservice
+            serviceRef: k8sservice
+            serviceInputs:
+              serviceDefinition:
+                type: Kubernetes
+                spec:
+                  artifacts:
+                    primary:
+                      primaryArtifactRef: <+input>
+                      sources: <+input>
           environment:
-            environmentRef: minikubedev
+            environmentRef: k8senv
             deployToAll: false
             infrastructureDefinitions:
-              - identifier: k8sinfra
+              - identifier: k8infra
           execution:
             steps:
               - step:
