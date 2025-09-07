@@ -1,0 +1,5 @@
+service:
+  name: smallest-spring-service
+  identifier: smallestspringservice
+  orgIdentifier: default
+  projectIdentifier: cicdproject
