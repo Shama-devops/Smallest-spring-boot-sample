@@ -37,6 +37,6 @@ pipeline:
                   spec:
                     shell: Bash
                     command: |-
-                      cd Smallest-spring-boot-sample/SmallestSpringApp
+                      cd SmallestSpringApp
                       mvn -B clean package
                       mvn -B test
