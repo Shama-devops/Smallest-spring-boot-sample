@@ -40,3 +40,14 @@ pipeline:
                       cd SmallestSpringApp
                       mvn clean package
                       mvn test
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: DockerHubconnector
+                    repo: shamamumtaz
+                    tags:
+                      - latest
+                    dockerfile: Dockerfile
+                    context: .
