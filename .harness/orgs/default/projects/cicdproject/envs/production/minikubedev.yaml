@@ -1,6 +1,0 @@
-environment:
-  name: minikube-dev
-  identifier: minikubedev
-  orgIdentifier: default
-  projectIdentifier: cicdproject
-  type: PreProduction
