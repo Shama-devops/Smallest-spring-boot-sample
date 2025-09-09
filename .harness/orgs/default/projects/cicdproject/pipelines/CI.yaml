@@ -50,4 +50,4 @@ pipeline:
                     tags:
                       - latest
                     dockerfile: Dockerfile
-                    context: SmallestSpringApp
+                    context: .
